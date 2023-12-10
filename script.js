@@ -47,22 +47,24 @@ keys.addEventListener('click', e => {
         }
 
         // convert percentage value
-        // if (keyType === "percentage") {
-        //     let percentageVal = parseFloat(displayResult.textContent) / 100;
-        //     displayResult.textContent = percentageVal;
-        
-        //     // Append the percentage value to the equation
-        //     equation.textContent += `(${displayResult.textContent}%)`;
-        
-        //     if (firstNum && operator) {
-        //         secondNum = percentageVal;
-        //         let result = roundNum(calculate(firstNum, operator, secondNum));
-        //         displayResult.textContent = result;
-        //         equation.textContent += `=${result}`;
-        //         firstNum = result;
-        //         secondNum = null;
-        //     }
-        // }
+        if (keyType === "percentage") {
+            // to remove number value after the operation symbol before converting to decimal number
+            let percentageNumCount = displayResult.textContent.length;
+
+            let percentageVal = parseFloat(displayResult.textContent) / 100;
+            displayResult.textContent = percentageVal;
+            
+            if (!(firstNum && operator)) {
+                equation.textContent = percentageVal;
+            }else {
+                removeLastString(percentageNumCount);
+            }
+
+            // remove numbers base on the length
+            function removeLastString (numberCount) {
+                equation.textContent = equation.textContent.slice(0,-numberCount) + percentageVal;
+            }
+        }
 
         // decimal value
         if (keyType === "decimal") {
