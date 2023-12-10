@@ -9,39 +9,39 @@
 <body>
     <div class="container">
         <div class="display">
-            <p class="equation">100 x 100</p>
-            <p class="display-result">10000</p>
+            <p class="equation">0</p>
+            <p class="display-result">0</p>
         </div>
         <div class="keys">
             <div class="key-rows">
-                <button class="btn-keys">AC</button>
-                <button class="btn-keys">Del</button>
-                <button class="btn-keys">%</button>
-                <button class="btn-keys operators">÷</button>
+                <button class="btn-keys" data-key-type = "clear">AC</button>
+                <button class="btn-keys" data-key-type = "delete">Del</button>
+                <button class="btn-keys" data-key-type = "percentage" disabled>%</button>
+                <button class="btn-keys operators" data-key-type = "operator" id="division">÷</button>
             </div>
             <div class="key-rows">
-                <button class="btn-keys numbers">7</button>
-                <button class="btn-keys numbers">8</button>
-                <button class="btn-keys numbers">9</button>
-                <button class="btn-keys operators">&times;</button>
+                <button class="btn-keys numbers" data-key-type = "numbers">7</button>
+                <button class="btn-keys numbers" data-key-type = "numbers">8</button>
+                <button class="btn-keys numbers" data-key-type = "numbers">9</button>
+                <button class="btn-keys operators" data-key-type = "operator" id="multiplication">&times;</button>
             </div>
             <div class="key-rows">
-                <button class="btn-keys numbers">4</button>
-                <button class="btn-keys numbers">5</button>
-                <button class="btn-keys numbers">6</button>
-                <button class="btn-keys operators">-</button>
+                <button class="btn-keys numbers" data-key-type = "numbers">4</button>
+                <button class="btn-keys numbers" data-key-type = "numbers">5</button>
+                <button class="btn-keys numbers" data-key-type = "numbers">6</button>
+                <button class="btn-keys operators" data-key-type = "operator" id="subtraction">-</button>
             </div>
             <div class="key-rows">
-                <button class="btn-keys numbers">1</button>
-                <button class="btn-keys numbers">2</button>
-                <button class="btn-keys numbers">3</button>
-                <button class="btn-keys operators">+</button>
+                <button class="btn-keys numbers" data-key-type = "numbers">1</button>
+                <button class="btn-keys numbers" data-key-type = "numbers">2</button>
+                <button class="btn-keys numbers" data-key-type = "numbers">3</button>
+                <button class="btn-keys operators" data-key-type = "operator" id="addition">+</button>
             </div>
             <div class="key-rows">
-                <button class="btn-keys numbers">0</button>
-                <button class="btn-keys numbers">00</button>
-                <button class="btn-keys numbers">.</button>
-                <button class="btn-keys operators">=</button>
+                <button class="btn-keys numbers" data-key-type = "numbers">0</button>
+                <button class="btn-keys numbers" data-key-type = "numbers">00</button>
+                <button class="btn-keys numbers" data-key-type = "decimal">.</button>
+                <button class="btn-keys operators" data-key-type = "equal">=</button>
             </div>
         </div>
     </div>

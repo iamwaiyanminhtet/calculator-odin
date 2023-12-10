@@ -16,7 +16,7 @@ body {
 .container {
     background-color: rgb(0, 0, 0);
     width: 400px;
-    height: fit-content;
+    height: min-content;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
