@@ -79,7 +79,7 @@ keys.addEventListener('click', e => {
             }
         }
 
-        // ac
+        // clear all
         if (keyType === "clear") {
             displayResult.textContent = 0;
             equation.textContent = 0;
